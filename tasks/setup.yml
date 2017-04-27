@@ -1,0 +1,5 @@
+---
+- name: "Clone the repository where it will be installed"
+  git:
+    repo: "{{ bootstrap_playbook_url }}"
+    dest: "/opt/ansible/{{ bootstrap_playbook_url | basename }}"
