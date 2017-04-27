@@ -1,0 +1,8 @@
+---
+# All the package setup required prior to installing the resources
+- name: "Install packages required to clone/admin the package"
+  package:
+    name: "{{ item }}"
+    state: "present"
+  with_items:
+    - "git"

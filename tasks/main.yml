@@ -1,0 +1,6 @@
+---
+# Don't put new tasks in here. Create a group for them, and stick in their own separate file. It makes it easier to
+# reason about them.
+- include: "packages.yml"
+- include: "setup.yml"
+- include: "systemd.yml"
