@@ -1,0 +1,9 @@
+# See https://unix.stackexchange.com/questions/198444/run-script-every-30-min-with-systemd
+[Unit]
+Description=Ensure the machine has up to date configuration
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/ansible/{{ bootstrap_playbook_url | basename }}
+ExecStartPre=/usr/bin/git pull
+ExecStart=/usr/local/bin/ansible-playbook -i localhost {{ bootstrap_playbook_file }}
