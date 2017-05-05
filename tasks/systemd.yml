@@ -1,0 +1,12 @@
+---
+- name: "Create the systemd service that will update the application"
+  template:
+    src: "{{ item }}"
+    dest: "/{{ item }}"
+    owner: "root"
+    group: "root"
+    mode: "777"
+  with_items:
+    - "etc/systemd/system/ansible.service"
+    - "etc/systemd/system/ansible.timer"
+  notify: "reload systemd"

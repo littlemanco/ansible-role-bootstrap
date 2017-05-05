@@ -6,4 +6,4 @@ Description=Ensure the machine has up to date configuration
 Type=oneshot
 WorkingDirectory=/opt/ansible/{{ bootstrap_playbook_url | basename }}
 ExecStartPre=/usr/bin/git pull
-ExecStart=/usr/local/bin/ansible-playbook -i localhost {{ bootstrap_playbook_file }}
+ExecStart=/usr/local/bin/ansible-playbook {{ bootstrap_playbook_file }}

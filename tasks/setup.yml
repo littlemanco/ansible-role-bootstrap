@@ -3,3 +3,11 @@
   git:
     repo: "{{ bootstrap_playbook_url }}"
     dest: "/opt/ansible/{{ bootstrap_playbook_url | basename }}"
+
+- name: "Create the hosts file in the default ansible path"
+  template:
+    src: "etc/ansible/hosts"
+    dest: "/etc/ansible/hosts"
+    owner: "root"
+    group: "root"
+    mode: "644"

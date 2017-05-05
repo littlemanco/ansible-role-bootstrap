@@ -75,6 +75,9 @@ bootstrap_playbook_url: "https://github.com/littlemanco/ansible-role-a-playbook"
 
 # The frequency, expressed as a systemd timer, that you wish to reprovision. Suggestion would be every 15 minutes.
 bootstrap_provision_frequency: ""
+
+# The path of the playbook file to execute
+bootstrap_playbook_file: "display.yml"
 ```
 
 That's it! Run the playbook, and that machine should take care of itself.

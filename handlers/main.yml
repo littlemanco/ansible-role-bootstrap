@@ -1,0 +1,15 @@
+---
+- name: "enable ansible service"
+  systemd:
+    state: "started"
+    enabled: "yes"
+    daemon_reload: "yes"
+    name: "ansible.service"
+  listen: "reload systemd"
+
+- name: "enable ansible timer"
+  systemd:
+    enabled: "yes"
+    daemon_reload: "yes"
+    name: "ansible.timer"
+  listen: "reload systemd"
